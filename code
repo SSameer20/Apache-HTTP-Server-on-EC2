@@ -1,0 +1,15 @@
+// The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows.
+// The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+
+sudo su -        
+yum update -y
+yum install -y git
+yum install -y httpd
+systemctl status httpd
+mkdir temp
+cd temp/
+git clone [https://github.com/SSameer20/Docker-Automation.git]
+mv * /var/www/html/
+cd /var/www/html/
+systemctl enable httpd
+systemctl start httpd
